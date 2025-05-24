@@ -15,7 +15,7 @@ const Products = lazy(() => import("./pages/admin/Products"));
 const Customer = lazy(() => import("./pages/admin/Customer"));
 const Transaction = lazy(() => import("./pages/admin/Transaction"));
 const Discount = lazy(() => import("./pages/admin/Discount"));
-const BarCharts = lazy(() => import("./pages/admin/charts/BarCharts"));
+const BarCharts = lazy(() => import("./pages/admin/charts/barchart"));
 const LineCharts = lazy(() => import("./pages/admin/charts/LineCharts"));
 const PieCharts = lazy(() => import("./pages/admin/charts/PieCharts"));
 
