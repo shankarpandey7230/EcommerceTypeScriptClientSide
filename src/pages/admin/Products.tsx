@@ -23,6 +23,13 @@ const arr: DataType[] = [
     stock: 50,
     id: "sajknaskd",
   },
+  {
+    photo: img1,
+    name: "Sample Product",
+    price: 9.99,
+    stock: 50,
+    id: "sajknaskd",
+  },
 ];
 const columns: ColumnDef<DataType>[] = [
   {
@@ -37,10 +44,12 @@ const columns: ColumnDef<DataType>[] = [
   {
     header: "Price",
     accessorKey: "price",
+    enableSorting: true,
   },
   {
     header: "Stock",
     accessorKey: "stock",
+    enableSorting: true,
   },
   {
     header: "Action",

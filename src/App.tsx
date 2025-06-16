@@ -2,14 +2,12 @@ import React, { lazy, Suspense } from "react";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router";
 import Loader from "./components/Loader";
-import StopWatch from "./pages/admin/apps/StopWatch";
 
 const Home = lazy(() => import("./pages/Home"));
 const Search = lazy(() => import("./pages/Search"));
 const Cart = lazy(() => import("./pages/Cart"));
 
 // Admin Routes Importing
-
 const Dashboard = lazy(() => import("./pages/admin/Dashboard"));
 const Products = lazy(() => import("./pages/admin/Products"));
 const Customer = lazy(() => import("./pages/admin/Customer"));
@@ -18,10 +16,17 @@ const Discount = lazy(() => import("./pages/admin/Discount"));
 const BarCharts = lazy(() => import("./pages/admin/charts/barchart"));
 const LineCharts = lazy(() => import("./pages/admin/charts/LineCharts"));
 const PieCharts = lazy(() => import("./pages/admin/charts/PieCharts"));
-
+// management
+const NewProduct = lazy(() => import("./pages/admin/management/NewProduct"));
+const ProductManagement = lazy(
+  () => import("./pages/admin/management/ProductManagement")
+);
+const TransactionManagement = lazy(
+  () => import("./pages/admin/management/TransactionManagement")
+);
 // apps
 const Coupon = lazy(() => import("./pages/admin/apps/Coupon"));
-const StopWatch = lazy(() => import("./pages/admin/apps/Stopwatch"));
+const StopWatch = lazy(() => import("./pages/admin/apps/StopWatch"));
 const Toss = lazy(() => import("./pages/admin/apps/Toss"));
 const App = () => {
   return (
@@ -44,6 +49,14 @@ const App = () => {
           <Route path="/admin/chart/bar" element={<BarCharts />} />
           <Route path="/admin/chart/line" element={<LineCharts />} />
           <Route path="/admin/chart/pie" element={<PieCharts />} />
+
+          {/* Management */}
+          <Route path="/admin/product/new" element={<NewProduct />} />
+          <Route path="/admin/product/:id" element={<ProductManagement />} />
+          <Route
+            path="/admin/transaction/:id"
+            element={<TransactionManagement />}
+          />
           {/* Apps */}
           <Route path="/admin/app/coupon" element={<Coupon />} />
           <Route path="/admin/app/stopwatch" element={<StopWatch />} />
