@@ -4,7 +4,7 @@ import { BsSearch } from "react-icons/bs";
 import { FaRegBell } from "react-icons/fa";
 import { HiTrendingDown, HiTrendingUp } from "react-icons/hi";
 import data from "../../assets/data.json";
-import { BarCharts, DoughnutChart } from "../../components/admin/Charts";
+import { BarChart, DoughnutChart } from "../../components/admin/Charts";
 import { BiMaleFemale } from "react-icons/bi";
 import TableHOC from "../../components/admin/TableHOC";
 import DashboardTable from "../../components/admin/DashboardTable";
@@ -54,7 +54,7 @@ const Dashboard = () => {
           <div className="revenue-chart">
             <h2>Revenue & Transaction</h2>
             {/* Graph here */}
-            <BarCharts
+            <BarChart
               data_1={[300, 144, 433, 655, 237, 755, 190]}
               data_2={[200, 444, 443, 665, 247, 855, 390]}
               title_1="Revenue"
