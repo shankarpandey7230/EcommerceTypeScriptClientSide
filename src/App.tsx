@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from "react";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router";
 import Loader from "./components/Loader";
+import { Link } from "react-router-dom";
 
 const Home = lazy(() => import("./pages/Home"));
 const Search = lazy(() => import("./pages/Search"));
@@ -34,6 +35,14 @@ const App = () => {
       {/* Headers */}
       <Suspense fallback={<Loader />}>
         <Routes>
+          <Route
+            path="/"
+            element={
+              <Link to="/admin/dashboard">
+                <button>Visit Dashboard</button>
+              </Link>
+            }
+          />
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<Search />} />
           <Route path="/cart" element={<Cart />} />

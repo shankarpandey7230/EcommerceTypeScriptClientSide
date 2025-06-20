@@ -8,8 +8,8 @@ import { FaPlus } from "react-icons/fa";
 interface DataType {
   photo: string;
   name: string;
-  price: number;
-  stock: number;
+  price: string;
+  stock: string;
   id: string;
 }
 
@@ -19,15 +19,15 @@ const arr: DataType[] = [
   {
     photo: img1,
     name: "Sample Product",
-    price: 99.99,
-    stock: 50,
+    price: "99.99",
+    stock: "5",
     id: "sajknaskd",
   },
   {
     photo: img1,
     name: "Sample Product",
-    price: 9.99,
-    stock: 50,
+    price: "99.99",
+    stock: "50",
     id: "sajknaskd",
   },
 ];
@@ -49,8 +49,21 @@ const columns: ColumnDef<DataType>[] = [
   {
     header: "Stock",
     accessorKey: "stock",
-    enableSorting: true,
+    cell: (info) => {
+      const [value, setValue] = useState(info.getValue() as string); // store as string
+
+      return (
+        <input
+          type="number"
+          value={value}
+          onChange={(e) => {
+            setValue(e.target.value); // don't convert to number yet
+          }}
+        />
+      );
+    },
   },
+
   {
     header: "Action",
     accessorKey: "id",
