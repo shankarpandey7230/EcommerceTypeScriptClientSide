@@ -10,6 +10,7 @@ const Search = lazy(() => import("./pages/Search"));
 const Cart = lazy(() => import("./pages/Cart"));
 const Orders = lazy(() => import("./pages/Order"));
 
+const Shipping = lazy(() => import("./pages/Shipping"));
 // Admin Routes Importing
 const Dashboard = lazy(() => import("./pages/admin/Dashboard"));
 const Products = lazy(() => import("./pages/admin/Products"));
@@ -49,6 +50,11 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/search" element={<Search />} />
           <Route path="/cart" element={<Cart />} />
+
+          {/* for logged in users only  */}
+          <Route>
+            <Route path="/shipping" element={<Shipping />} />
+          </Route>
 
           {/* admins */}
 

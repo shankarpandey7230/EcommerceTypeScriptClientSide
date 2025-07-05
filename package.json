@@ -12,6 +12,7 @@
   "dependencies": {
     "@tanstack/react-table": "^8.21.3",
     "chart.js": "^4.4.9",
+    "country-list": "^2.3.0",
     "firebase": "^11.6.0",
     "react": "^19.0.0",
     "react-chartjs-2": "^5.3.0",
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
+    "@types/country-list": "^2.1.4",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react-swc": "^3.8.0",
