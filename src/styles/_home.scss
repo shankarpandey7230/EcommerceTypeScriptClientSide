@@ -1,3 +1,6 @@
+@use "variables" as *;
+@use "admin-styles/mixin" as *;
+
 .home {
   padding: 2rem 5%;
   display: flex;

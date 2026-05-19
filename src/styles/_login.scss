@@ -1,3 +1,5 @@
+@use "admin-styles/mixin" as *;
+
 .login {
   height: 90vh;
   @include flex(column);

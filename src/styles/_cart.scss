@@ -1,3 +1,6 @@
+@use "variables" as *;
+@use "admin-styles/mixin" as *;
+
 .cart {
   padding: 2rem 4rem;
   @include flex(row, unset, unset, 4rem);

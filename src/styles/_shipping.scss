@@ -1,3 +1,6 @@
+@use "variables" as *;
+@use "admin-styles/mixin" as *;
+
 .shipping {
   @include flex;
   .back-btn {
