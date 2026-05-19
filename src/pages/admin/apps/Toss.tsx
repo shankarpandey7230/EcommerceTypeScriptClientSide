@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import AdminSidebar from "../../../components/admin/AdminSidebar";
 import headImg from "../../../assets/images/head.jpg";
 import tailImg from "../../../assets/images/tail.jpg";
